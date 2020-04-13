@@ -2,6 +2,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+patchesStrategicMerge:
+- patches/syncOrder.yaml
 
 bases:
 - https://github.com/liaodaniel/k8s_foobar_chart.git/nginx?ref=d626bc06b79b75232c3473a8d8a0ee620aea4b50
