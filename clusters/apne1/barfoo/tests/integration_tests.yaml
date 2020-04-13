@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: integration-test-
+  name: barfoo-nginx
   namespace: default
   labels:
     app: barfoo-nginx
