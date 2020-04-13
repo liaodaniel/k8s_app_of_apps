@@ -17,3 +17,8 @@ metadata:
 ```
 * Argocd is also capable of performing CI, https://github.com/argoproj/argo/blob/master/examples/README.md for info.
 * Argocd works by polling out of the box (2-3 min intervals). However, argocd-events could potentially be used to run argocd sync on github webhook events.
+* Ordering of resources can be controlled in ascending order. The wave will wait until each resource is healthy before proceeding.
+```
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+```
