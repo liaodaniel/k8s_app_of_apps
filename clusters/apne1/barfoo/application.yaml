@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apse2-foobar
+  name: apne1-foobar
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -13,11 +13,10 @@ spec:
   source:
     repoURL: 'https://github.com/liaodaniel/k8s_app_of_apps.git'
     targetRevision: HEAD
-    path: clusters/apse2/foobar
+    path: clusters/apne1/barfoo
 
     kustomize:
-      namePrefix: apse2-
-
+      namePrefix: apne1-
   destination:
     server: https://kubernetes.default.svc
     namespace: default
