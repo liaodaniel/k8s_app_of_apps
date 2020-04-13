@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: integration-test-
+  namespace: default
+  labels:
+    app: barfoo-nginx
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  activeDeadlineSeconds: 120
+  template:
+    metadata:
+      labels:
+        app: barfoo-nginx
+        kubernetes.io/os: "linux"
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: test
+          image: curlimages/curl:7.69.1
+          imagePullPolicy: Always
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              sleep 20
