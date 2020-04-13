@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apse2-foobar
+  namespace: default
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  # The project the application belongs to.
+  project: default
+
+  # Source of the application manifests
+  source:
+    repoURL: 'https://github.com/liaodaniel/k8s_app_of_apps.git'
+    targetRevision: HEAD
+    path: clusters/apse2/foobar
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy: {}
+
