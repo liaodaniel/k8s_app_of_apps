@@ -3,7 +3,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- ../tests/integration_tests.yaml
+- tests/integration_tests.yaml
 
 bases:
 - https://github.com/liaodaniel/k8s_foobar_chart.git/nginx?ref=672f1d4bf261b376a515808072c290355e7bcdc5
