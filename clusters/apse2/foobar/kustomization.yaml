@@ -4,4 +4,5 @@ kind: Kustomization
 
 
 bases:
-- https://github.com/liaodaniel/k8s_foobar_chart.git/nginx?ref=442527f8740c4301aa1c2d4c06dd9a1674613cb3
+- https://github.com/liaodaniel/k8s_foobar_chart.git/nginx?ref=d626bc06b79b75232c3473a8d8a0ee620aea4b50
+- https://github.com/liaodaniel/k8s_foobar_chart.git/apache?ref=d626bc06b79b75232c3473a8d8a0ee620aea4b50
