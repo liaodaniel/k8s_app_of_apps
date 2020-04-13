@@ -6,4 +6,4 @@ resources:
 - tests/integration_tests.yaml
 
 bases:
-- https://github.com/liaodaniel/k8s_foobar_chart.git/nginx?ref=672f1d4bf261b376a515808072c290355e7bcdc5
+- https://github.com/liaodaniel/k8s_foobar_chart.git/apache?ref=2299a7bd472f0812f4ae6fbe8bd9164794a8355f

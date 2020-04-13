@@ -26,3 +26,5 @@ spec:
           args:
             - |
               sleep 20
+              echo "Going to fail"
+              exit 1
