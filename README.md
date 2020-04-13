@@ -30,3 +30,12 @@ syncPolicy: {}
 
 ```
 
+* Resource hooks are k8s resources with argocd annotations. These annotations are used to schedule them as part of the sync phase. Argocd will only proceed to the next part of the phase if the resources terminate successfully.
+```
+metadata:
+  name: abc
+  annotations:
+	argocd.argoproj.io/hook: PreSync|Sync|Skip|PostSync|SyncFail
+
+```
+
